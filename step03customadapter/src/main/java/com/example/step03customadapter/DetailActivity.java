@@ -30,7 +30,7 @@ public class DetailActivity extends AppCompatActivity {
         //확인버튼을 눌렀을 떄 Activity 종료
         Button confirmBtn = findViewById(R.id.confirmBtn);
         confirmBtn.setOnClickListener(view -> {
-            //finish()메소드를 호출하면 Activity가 종료됨
+            //finish() 메소드를 호출하면 Activity가 종료됨
         });
     }
 }

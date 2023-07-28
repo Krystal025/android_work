@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         requestBtn.setOnClickListener(view -> {
             //1. 입력한 url주소를 읽어와서
             String url = inputUrl.getText().toString();
-            //2. http요청을 하rh
+            //2. http요청을 하고
             new RequestTask().execute(url);
             //3. 정상적으로 응답되면 응답한 문자열을 EditText에 출력
         });
@@ -76,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
             return builder.toString();
         }
         //doInBackground() 메소드에서 리턴된 문자열이 이 메소드가 호출되면서 메소드의 인자로 전달됨
-
         @Override
         protected void onPostExecute(String s) {
             super.onPostExecute(s);

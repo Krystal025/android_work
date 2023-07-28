@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity implements Util.RequestListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // activity_main.xml 문서에 정의된 객체의 참조값 얻어오기
-        editText = (EditText)findViewById(R.id.editText);
-        EditText inputMsg = (EditText)findViewById(R.id.inputMsg);
-        Button sendBtn = (Button)findViewById(R.id.sendBtn);
+        editText = findViewById(R.id.editText);
+        EditText inputMsg = findViewById(R.id.inputMsg);
+        Button sendBtn = findViewById(R.id.sendBtn);
         // 첫번째 버튼에 리스너 등록
         sendBtn.setOnClickListener(view->{
             //입력한 문자열
@@ -42,12 +42,12 @@ public class MainActivity extends AppCompatActivity implements Util.RequestListe
                     this);
         });
         // 두번째 버튼에 리스너 등록
-        Button sendBtn2=(Button) findViewById(R.id.sendBtn2);
+        Button sendBtn2 = findViewById(R.id.sendBtn2);
         sendBtn2.setOnClickListener(view->{
             //입력한 문자열
             String msg = inputMsg.getText().toString();
             //요청 파라미터로 전달하기 위해 "msg" 라는 키값으로 Map 에 담는다.
-            Map<String, String> map=new HashMap<>();
+            Map<String, String> map = new HashMap<>();
             map.put("msg", msg);
             Util.sendPostRequest(1,
                     "http://192.168.0.17:9000/boot07/android/tweet2",
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity implements Util.RequestListe
                     this);
         });
         //세번째 버튼도 리스너 등록하기
-        Button sendBtn3=(Button) findViewById(R.id.sendBtn3);
+        Button sendBtn3 = findViewById(R.id.sendBtn3);
         sendBtn3.setOnClickListener(view->{
             //입력한 문자열
             String msg = inputMsg.getText().toString();
